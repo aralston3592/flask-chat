@@ -5,18 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     
     <title>Chat page for {{ username }}</title>
 </head>
 <body>
     <h1>Welcome, {{ username }}</h1>
-    
-    <form method="POST">
-        <textarea cols="50" rows="4" name="message" id="message"></textarea>
-        <br>
-        <button>Send Message</button>
-    </form>
+
+    <div class="row">
+        <form class="col s12" method="POST">
+            <div class="row">
+                <div class="input-field col s12">
+                    <textarea class="materialize-textarea" placeholder="Enter message here..." cols="50" rows="4" name="message" id="message"></textarea>
+                </div>
+                <br>
+                <button class="btn waves-effect waves-light" type="submit" name="action">SEND
+                    <i class="material-icons right">send</i>
+                </button>
+            </div>
+        </form>
+    </div>
 
     {% for message in chat_messages %}
     
@@ -40,7 +48,7 @@
             }, 5000)
         }
     </script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 </body>
 </html>
