@@ -6,21 +6,27 @@
     
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Home Page</title>
     
 </head>
 
 <body>
-
-
-    <div class="row">
-        <form method="POST">
-            <div class="input-field col s6">
-                <input id="username" name="username" type="text" placeholder="Username" class="validate">
-            </div>
-            <button class="waves-effect waves-light btn-large">Go to chat</button>
-        </form>
+    <div class="container center-align">
+        <div class="row">
+            <h1>Welcome to the Flask chat!</h1>
+            <h3>Get started by entering a username!</h3>
+        </div>
+    </div>
+    <div class="container valign-wrapper">
+        <div class="row center-align">
+            <form method="POST">
+                <div class="input-field">
+                    <input id="username" name="username" type="text" placeholder="Username" class="validate">
+                </div>
+                <button class="waves-effect waves-light btn-large">Go to chat</button>                
+            </form>
+        </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
